@@ -1,4 +1,6 @@
-__plugin_name__ = "OctoNDI"
-__plugin_version__ = "1.0.0"
-__plugin_description__ = "Access your webcam in HD"
-__plugin_pythoncompat__ = ">=3.8.10"
+import octoprint.plugin
+
+
+class OctoNDI(octoprint.plugin.StartupPlugin):
+    def on_after_startup(self):
+        self._logger.info('This Is the OctoNDI plugin')
